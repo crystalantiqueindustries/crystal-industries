@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Industries | Premium Antique Brass & Metallic Pipe Supplier</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #141210;
+            --bg-card: #1f1c18;
+            --accent-brass: #d4af37;
+            --accent-copper: #b87333;
+            --text-light: #f4efea;
+            --text-muted: #a39b8e;
+            --border-color: #38322a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand-logo {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Header / Navigation */
+        header {
+            background-color: rgba(20, 18, 16, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            font-size: 1.5rem;
+            color: var(--accent-brass);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-brass);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 5% 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #2a251e 0%, var(--bg-main) 70%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--accent-brass);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-brass), var(--accent-copper));
+            color: #141210;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Gallery Section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--accent-brass);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .gallery-section {
+            padding: 4rem 5%;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .gallery-card:hover {
+            border-color: var(--accent-brass);
+        }
+
+        .card-image-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #2b2620;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            color: var(--accent-brass);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Features / Why Choose Us */
+        .features-section {
+            padding: 4rem 5%;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            padding: 1.5rem;
+            border-left: 3px solid var(--accent-brass);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .feature-box h4 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            min-width: 280px;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .contact-card h3 {
+            color: var(--accent-brass);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-copper);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <a href="#" class="brand-logo">CRYSTAL INDUSTRIES</a>
+        <nav>
+            <a href="#products">Products & Finishes</a>
+            <a href="#about">Why Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Premier Supplier of Antique Brass & Metallic Pipes</h1>
+        <p>Providing high-quality antique brass, antique copper, and specialty metallic finished pipes and hardware built to elevate architectural and decorative designs.</p>
+        <a href="#contact" class="cta-button">Get Quotation / Inquire Now</a>
+    </section>
+
+    <!-- Product Gallery Section -->
+    <section class="gallery-section" id="products">
+        <h2 class="section-title">Our Product Gallery</h2>
+        <p class="section-subtitle">Explore our range of premium antique pipe finishes and designs</p>
+
+        <div class="gallery-grid">
+            <!-- Product Card 1 -->
+            <div class="gallery-card">
+                <div class="card-image-placeholder">
+                    <!-- Replace 'src' with your image file path or URL -->
+                    <span>[ Replace with Antique Brass Pipe Photo ]</span>
+                </div>
+                <div class="card-content">
+                    <h3>Antique Brass Pipes</h3>
+                    <p>Classic warm metallic finish crafted for high durability and rich aesthetic appeal.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="gallery-card">
+                <div class="card-image-placeholder">
+                    <span>[ Replace with Antique Copper Pipe Photo ]</span>
+                </div>
+                <div class="card-content">
+                    <h3>Antique Copper Pipes</h3>
+                    <p>Deep rich copper tone providing a distinct rustic and vintage appearance.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="gallery-card">
+                <div class="card-image-placeholder">
+                    <span>[ Replace with Silver Matte Pipe Photo ]</span>
+                </div>
+                <div class="card-content">
+                    <h3>Silver Stainless Steel Matte</h3>
+                    <p>Sleek matte finish engineered for modern industrial and hardware applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Why Choose Us -->
+    <section class="features-section" id="about">
+        <h2 class="section-title">Why Partner With Us</h2>
+        <p class="section-subtitle">Reliable supply and manufacturing consistency for all your requirements</p>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>Premium Finishing</h4>
+                <p>Every pipe finish undergoes strict quality control to guarantee consistency across orders.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Bulk Supply Capacity</h4>
+                <p>Equipped to fulfill wholesale orders and custom requirements on schedule.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Direct Wholesale Pricing</h4>
+                <p>Get competitive pricing directly from the supplier for max value on trade orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact Crystal Industries</h2>
+        <p class="section-subtitle">Reach out directly to discuss bulk orders, pricing, or custom specifications</p>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <h3>Phone / WhatsApp</h3>
+                <p><a href="tel:8660830895">+91 8660830895</a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Email Us</h3>
+                <p><a href="mailto:crystal.antique.industries@gmail.com">crystal.antique.industries@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Crystal Industries. All Rights Reserved. | Antique Pipe & Hardware Supplier</p>
+    </footer>
+
+</body>
+</html>
